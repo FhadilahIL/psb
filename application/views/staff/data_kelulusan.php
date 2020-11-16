@@ -26,8 +26,7 @@
                         <th style="min-width: 300px;">Nama Pendaftar</th>
                         <th style="min-width: 130px;">Score Kelulusan</th>
                         <th style="min-width: 100px;">Keterangan</th>
-                        <th style="min-width: 100px;" class="text-center">Aksi</th>
-                        <!-- <th class="text-center" style="min-width: 100px;">Aksi</th> -->
+                        <!-- <th style="min-width: 100px;" class="text-center">Aksi</th> -->
                     </thead>
                     <tbody>
                         <?php $no = 1;
@@ -43,11 +42,11 @@
                                 <?php } else { ?>
                                     <td class="text-center bg-danger text-light"><?= $kelulusan->keterangan_kelulusan ?></td>
                                 <?php } ?>
-                                <td class="text-center">
+                                <!-- <td class="text-center">
                                     <button type="button" class="btn btn-warning btn-sm" data-toggle="modal" data-target="#staticBackdropEdit<?= $kelulusan->id_penilaian_pendaftar ?>">
                                         <i class="fas fa-edit"></i>
                                     </button>
-                                </td>
+                                </td> -->
                             </tr>
                             <!-- Modal Tambah Tahun Ajaran -->
                             <div class="modal fade" id="staticBackdropEdit<?= $kelulusan->id_penilaian_pendaftar ?>" data-backdrop="static" tabindex="-1" role="dialog" aria-labelledby="staticBackdropLabel" aria-hidden="true">

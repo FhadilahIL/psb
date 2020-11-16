@@ -23,7 +23,7 @@
                             <th class="text-center" style="min-width: 230px;">Tahun Ajaran</th>
                             <th class="text-center" style="min-width: 150px;">NISN</th>
                             <th style="min-width: 300px;">Nama Pendaftar</th>
-                            <th class="text-center" style="min-width: 150px;">Score Penilaian</th>
+                            <th class="text-center" style="min-width: 180px;">Score Penilaian</th>
                             <th class="text-center" style="min-width: 150px;">Keterangan</th>
                         </thead>
                         <tbody id="isi_table_cetak_laporan"></tbody>

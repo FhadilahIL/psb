@@ -105,7 +105,7 @@
                                             </div>
                                             <div class="form-group">
                                                 <label>Pilihan Ganda Benar</label>
-                                                <input type="text" class="form-control" min="0" max="" name="pilihan_ganda_benar" value="<?= $nilai->pilihan_ganda_benar ?>" required>
+                                                <input type="text" class="form-control" min="0" max="<?= $nilai->jumlah_pilihan_ganda ?>" name="pilihan_ganda_benar" value="<?= $nilai->pilihan_ganda_benar ?>" required>
                                             </div>
                                             <div class="form-group">
                                                 <label>Nilai Baca Tulis Qur'an</label>

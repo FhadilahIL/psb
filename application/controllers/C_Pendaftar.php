@@ -59,7 +59,6 @@ class C_pendaftar extends CI_Controller
         $id_pengasuh_pendaftar = $this->input->post('id_pengasuh', TRUE);
 
         $pendaftar = [
-            'id_pendaftar'              => $id_pendaftar,
             'nama_pendaftar'            => $this->input->post('nama_pendaftar', TRUE),
             'email_pendaftar'           => $this->input->post('email_pendaftar', TRUE),
             'nisn'                      => $this->input->post('nisn', TRUE),
@@ -238,6 +237,7 @@ class C_pendaftar extends CI_Controller
         $config['upload_path']          = './assets/img/profile/';
         $config['allowed_types']        = 'jpg|png|jpeg';
         $config['file_name']            = $nama;
+        $config['max_size']             = 2048;
         $config['encrypt_name']         = TRUE;
         $config['overwrite']            = TRUE;
 
@@ -261,6 +261,7 @@ class C_pendaftar extends CI_Controller
         $config['upload_path']          = './assets/berkas/';
         $config['allowed_types']        = 'pdf';
         $config['file_name']            = 'Berkas ' . $nama;
+        $config['max_size']             = 5120;
         $config['overwrite']            = TRUE;
 
         $this->load->library('upload', $config);
