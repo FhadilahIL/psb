@@ -46,8 +46,8 @@
                                     <div id="penilaian"></div>
                             </div>
                             <div class="modal-footer">
-                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                <button type="submit" id="simpan" class="btn btn-success" disabled>Simpan Penilaian</button>
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal"><i class="fas fa-sign-out-alt fa-flip-horizontal"></i> Close</button>
+                                <button type="submit" id="simpan" class="btn btn-success" disabled><i class="fas fa-check"></i>Simpan Penilaian</button>
                                 </form>
                             </div>
                         </div>
@@ -113,8 +113,8 @@
                                             </div>
                                     </div>
                                     <div class="modal-footer">
-                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                        <button type="submit" class="btn btn-success">Ubah Data</button>
+                                        <button type="button" class="btn btn-secondary" data-dismiss="modal"><i class="fas fa-sign-out-alt fa-flip-horizontal"></i> Close</button>
+                                        <button type="submit" class="btn btn-success"><i class="fas fa-check"></i> Ubah Data</button>
                                         </form>
                                     </div>
                                 </div>
@@ -146,7 +146,7 @@
                                         </div>
                                     </div>
                                     <div class="modal-footer">
-                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                        <button type="button" class="btn btn-secondary" data-dismiss="modal"><i class="fas fa-sign-out-alt fa-flip-horizontal"></i> Close</button>
                                     </div>
                                 </div>
                             </div>

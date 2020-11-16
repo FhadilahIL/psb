@@ -28,7 +28,7 @@
                         </thead>
                         <tbody id="isi_table_cetak_laporan"></tbody>
                     </table>
-                    <a class="btn btn-block btn-info shadow mt-3" id="tombol_cetak" href="#" target="_blank" rel="noopener noreferrer">Cetak Laporan</a>
+                    <a class="btn btn-block btn-info shadow mt-3" id="tombol_cetak" href="#" target="_blank" rel="noopener noreferrer"><i class="fas fa-print"></i> Cetak Laporan</a>
                 </div>
             </div>
         </div>

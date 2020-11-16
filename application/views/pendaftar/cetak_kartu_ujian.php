@@ -21,7 +21,7 @@
                 <div class="card shadow">
                     <div class="card-body">
                         <div class="d-flex justify-content-end mb-3">
-                            <a href="<?= base_url('c_export/cetak_kartu_ujian') ?>" target="_blank" class="btn btn-secondary">Download</a>
+                            <a href="<?= base_url('c_export/cetak_kartu_ujian') ?>" target="_blank" class="btn btn-secondary"><i class="fas fa-print"></i> Cetak Kartu</a>
                         </div>
                         <div class="card shadow p-3">
                             <div>

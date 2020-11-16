@@ -9,7 +9,7 @@
             <ul id="sidebarnav">
                 <li class="sidebar-item <?= $selected[0] ?>">
                     <a class="sidebar-link sidebar-link <?= $active[0] ?>" href="<?= base_url('pendaftar') ?>" aria-expanded="false">
-                        <i data-feather="home" class="feather-icon"></i>
+                        <i class="fas fa-home feather-icon"></i>
                         <span class="hide-menu">Dashboard</span>
                     </a>
                 </li>
@@ -22,25 +22,25 @@
 
                 <li class="sidebar-item <?= $selected[1] ?>">
                     <a class="sidebar-link sidebar-link <?= $active[1] ?>" href="<?= base_url('pendaftar/data_pendaftar') ?>" aria-expanded="false">
-                        <i data-feather="home" class="feather-icon"></i>
+                        <i class="fas fa-user feather-icon"></i>
                         <span class="hide-menu">Data Pendaftar</span>
                     </a>
                 </li>
                 <li class="sidebar-item <?= $selected[2] ?>">
                     <a class="sidebar-link sidebar-link <?= $active[2] ?>" href="<?= base_url('pendaftar/pembayaran') ?>" aria-expanded="false">
-                        <i data-feather="home" class="feather-icon"></i>
+                        <i class="fas fa-file-invoice-dollar feather-icon"></i>
                         <span class="hide-menu">Pembayaran</span>
                     </a>
                 </li>
                 <li class="sidebar-item <?= $selected[3] ?>">
                     <a class="sidebar-link sidebar-link <?= $active[3] ?>" href="<?= base_url('pendaftar/cetak_kartu_ujian') ?>" aria-expanded="false">
-                        <i data-feather="home" class="feather-icon"></i>
+                        <i class="fas fa-file-alt feather-icon"></i>
                         <span class="hide-menu">Cetak Kartu Ujian</span>
                     </a>
                 </li>
                 <li class="sidebar-item <?= $selected[4] ?>">
                     <a class="sidebar-link sidebar-link <?= $active[4] ?>" href="<?= base_url('pendaftar/pengumuman') ?>" aria-expanded="false">
-                        <i data-feather="home" class="feather-icon"></i>
+                        <i class="fas fa-trophy feather-icon"></i>
                         <span class="hide-menu">Pengumuman</span>
                     </a>
                 </li>
@@ -53,7 +53,7 @@
 
                 <li class="sidebar-item">
                     <a class="sidebar-link sidebar-link" href="<?= base_url('auth/logout') ?>" aria-expanded="false">
-                        <i data-feather="home" class="feather-icon"></i>
+                        <i class="fas fa-sign-out-alt fa-flip-horizontal feather-icon"></i>
                         <span class="hide-menu">Logout</span>
                     </a>
                 </li>

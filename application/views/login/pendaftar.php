@@ -54,7 +54,7 @@
                         <?= form_open('auth/pendaftar', ['method' => 'post']) ?>
                         <div class="form-group">
                             <label class="mb-1" for="inputEmailAddress">NISN</label>
-                            <input class="form-control py-4" maxlength="10" oninput="this.value = this.value.replace(/[^0-9]/g,'').replace(/(\..*)\./g, '$1')" name="nisn" value="<?= set_value('nisn') ?>" type="text" placeholder="Masukan Email Terdaftar">
+                            <input class="form-control py-4" maxlength="10" oninput="this.value = this.value.replace(/[^0-9]/g,'').replace(/(\..*)\./g, '$1')" name="nisn" value="<?= set_value('nisn') ?>" type="text" placeholder="Masukan NISN Terdaftar">
                             <small class="text-danger"><?= form_error('nisn'); ?></small>
                         </div>
                         <div class="form-group">
@@ -69,7 +69,7 @@
                             <button type="submit" class="btn btn-dark btn-block">Masuk</button>
                         </div>
                         </form>
-                        <div class="mt-3 text-center">Belum Punya Akun? <a href="<?= base_url('auth/registrasi') ?>">Daftar</a></div>
+                        <div class="mt-3 text-center">Belum Registrasi? <a href="<?= base_url('auth/registrasi') ?>">Registrasi</a></div>
                     </div>
                 </div>
             </div>

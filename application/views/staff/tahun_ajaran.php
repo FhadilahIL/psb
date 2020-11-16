@@ -50,8 +50,8 @@
                                     </div>
                             </div>
                             <div class="modal-footer">
-                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                <button type="submit" class="btn btn-success" <?= $disabled ?>>Simpan Tahun Ajaran</button>
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal"><i class="fas fa-sign-out-alt fa-flip-horizontal"></i> Close</button>
+                                <button type="submit" class="btn btn-success" <?= $disabled ?>><i class="fas fa-check"></i> Simpan Tahun Ajaran</button>
                                 </form>
                             </div>
                         </div>
@@ -136,8 +136,8 @@
                                             </div>
                                     </div>
                                     <div class="modal-footer">
-                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                        <button type="submit" class="btn btn-success">Ubah Tahun Ajaran</button>
+                                        <button type="button" class="btn btn-secondary" data-dismiss="modal"><i class="fas fa-sign-out-alt fa-flip-horizontal"></i> Close</button>
+                                        <button type="submit" class="btn btn-success"><i class="fas fa-check"></i> Ubah Tahun Ajaran</button>
                                         </form>
                                     </div>
                                 </div>

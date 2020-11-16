@@ -52,8 +52,8 @@
                                         </div>
                                 </div>
                                 <div class="modal-footer">
-                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                    <button type="submit" class="btn btn-success">Simpan Data Pendaftar</button>
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal"><i class="fas fa-sign-out-alt fa-flip-horizontal"></i> Close</button>
+                                    <button type="submit" class="btn btn-success"><i class="fas fa-check"></i> Simpan Data Pendaftar</button>
                                     </form>
                                 </div>
                             </div>
@@ -210,13 +210,14 @@
                                                     <div class="form-group">
                                                         <label>NISN</label>
                                                         <select name="status_pembayaran" class="form-control select">
+                                                            <option value="">-- Pilih Status Pembayaran --</option>
                                                             <option value=" ">Belum Dibayar</option>
                                                             <option value="Diterima">Sudah Dibayar</option>
                                                         </select>
                                                     </div>
                                             </div>
                                             <div class="modal-footer">
-                                                <button type="button" class="btn btn-secondary" data-dismiss="modal"><i class="fas fa-close"></i> Close</button>
+                                                <button type="button" class="btn btn-secondary" data-dismiss="modal"><i class="fas fa-sign-out-alt fa-flip-horizontal"></i> Close</button>
                                                 <button type="submit" class="btn btn-success"><i class="fas fa-check"></i> Verifikasi</button>
                                                 </form>
                                             </div>

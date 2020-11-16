@@ -78,7 +78,7 @@
                             <button type="submit" class="btn btn-dark btn-block">Daftar</button>
                         </div>
                         </form>
-                        <div class="mt-3 text-center">Sudah Punya Akun? <a href="<?= base_url('auth/pendaftar') ?>">Masuk</a></div>
+                        <div class="mt-3 text-center">Sudah Registrasi? <a href="<?= base_url('auth/pendaftar') ?>">Login</a></div>
                     </div>
                 </div>
             </div>
