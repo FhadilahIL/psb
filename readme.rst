@@ -5,7 +5,7 @@ Penerimaan Santri Baru - SMP Tazkia Insani
 Sistem Penerimaan Siswa Baru di SMP Tazkia Insani ini diperuntukan memenuhi 
 syarat kelulusan saya di Universitas Pamulang angkatan Tahun 2016. Program 
 yang saya buat ini adalah sistem pendaftaran dan seleksi siswa baru menggunakan 
-metode Weighted Product. Ini adalah karya saya untuk melengkapi skripsi saya 
+metode Weighted Product (WP). Ini adalah karya saya untuk melengkapi skripsi saya 
 di jurusan Teknik Informatika. Oleh karena itu, saya membuat program ini dan 
 apabila ingin mengembangkan program yang saya buat, silahkan sertakan link 
 github saya. Terima Kasih.
@@ -22,7 +22,9 @@ Staff :
 
 Pendaftar :
 
-# Silahkan buat sendiri di registrasi pendaftar
+# nisn = 9989132721
+
+# password = pendaftar1
 
 *******************
 Release Information
