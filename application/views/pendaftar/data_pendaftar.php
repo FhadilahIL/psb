@@ -149,7 +149,7 @@
                                 <input type="number" name="no_kps" maxlength="16" value="<?= $user->no_kps ?>" class="form-control">
                             </div>
                             <div class="form-group">
-                                <label>Foto (Background Merah Ukuran 3x4)</label> <br />
+                                <label>Foto (Background Merah Ukuran 3x4, maksimal size 2 MB)</label> <br />
                                 <div>
                                     <img src="<?= base_url('assets/img/profile/') . $user->foto ?>" width="150px" height="200px" class="mb-2">
                                     <p id="hasil" hidden>Preview Update Foto</p>
@@ -288,7 +288,7 @@
                                 <input type="number" name="jumlah_saudara" class="form-control" value="<?= $user->jumlah_saudara_kandung ?>">
                             </div>
                             <div class="form-group">
-                                <label>Upload Berkas <small>(Berkas Prestasi dan Beasiswa jika ada)</small></label> <br />
+                                <label>Upload Berkas <small>(Berkas Prestasi dan Beasiswa jika ada, maksimal size 5 MB)</small></label> <br />
                                 <?php if ($user->berkas != 'Sudah Diterima Staff') { ?>
                                     <a href="<?= base_url('/assets/berkas/') . $user->berkas ?>" target="_blank"><?= $user->berkas ?></a>
                                     <input type="file" name="berkas" class="form-control-file w-100" accept=".pdf">
@@ -336,7 +336,7 @@
                                     </div>
                                     <div class="form-group">
                                         <label>Penghasilan</label>
-                                        <input type="text" oninput="this.value = this.value.replace(/[^0-9]/g,'').replace(/(\..*)\./g, '$1')" name="penghasilan[]" class="form-control" value="<?= number_format($ayah->penghasilan, 0, '', '.') ?>">
+                                        <input type="text" oninput="this.value = this.value.replace(/[^0-9]/g,'').replace(/(\..*)\./g, '$1')" name="penghasilan[]" class="form-control" value="<?= $ayah->penghasilan ?>">
                                     </div>
                                     <hr />
                                 </div>
@@ -411,7 +411,7 @@
                                     </div>
                                     <div class="form-group">
                                         <label>Penghasilan</label>
-                                        <input type="text" oninput="this.value = this.value.replace(/[^0-9]/g,'').replace(/(\..*)\./g, '$1')" name="penghasilan[]" class="form-control" value="<?= number_format($ibu->penghasilan, 0, '', '.') ?>">
+                                        <input type="text" oninput="this.value = this.value.replace(/[^0-9]/g,'').replace(/(\..*)\./g, '$1')" name="penghasilan[]" class="form-control" value="<?= $ibu->penghasilan ?>">
                                     </div>
                                     <hr />
                                 </div>
@@ -486,7 +486,7 @@
                                     </div>
                                     <div class="form-group">
                                         <label>Penghasilan</label>
-                                        <input type="text" oninput="this.value = this.value.replace(/[^0-9]/g,'').replace(/(\..*)\./g, '$1')" name="penghasilan[]" class="form-control" value="<?= number_format($wali->penghasilan, 0, '', '.') ?>">
+                                        <input type="text" oninput="this.value = this.value.replace(/[^0-9]/g,'').replace(/(\..*)\./g, '$1')" name="penghasilan[]" class="form-control" value="<?= $wali->penghasilan ?>">
                                     </div>
                                     <hr />
                                 </div>

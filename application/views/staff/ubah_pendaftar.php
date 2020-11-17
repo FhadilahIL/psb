@@ -149,7 +149,7 @@
                                 <input type="number" name="no_kps" maxlength="16" value="<?= $data_pendaftar->no_kps ?>" class="form-control">
                             </div>
                             <div class="form-group">
-                                <label>Foto (Background Merah Ukuran 3x4)</label> <br />
+                                <label>Foto <small>(Background Merah Ukuran 3x4, Maksimal Size 2 MB)</small></label> <br />
                                 <div>
                                     <img src="<?= base_url('assets/img/profile/') . $data_pendaftar->foto ?>" width="150px" height="200px" class="mb-2">
                                     <p id="hasil" hidden>Preview Update Foto</p>
@@ -289,11 +289,11 @@
                             </div>
                             <div class="form-group">
                                 <?php if ($data->berkas != 'Sudah Diterima Staff' && $data->berkas != '') { ?>
-                                    <label>Upload Berkas <small>(Berkas Prestasi dan Beasiswa jika ada)</small></label> <br />
+                                    <label>Upload Berkas <small>(Berkas Prestasi dan Beasiswa jika ada, Maksimal Size 5 MB)</small></label> <br />
                                     <a href="<?= base_url('/assets/berkas/') . $data->berkas ?>" target="_blank"><?= $data->berkas ?></a>
                                     <input type="text" name="berkas" class="form-control w-100" readonly hidden value="Sudah Diterima Staff">
                                 <?php } else { ?>
-                                    <label>Upload Berkas <small>(Berkas Prestasi dan Beasiswa jika ada)</small></label> <br />
+                                    <label>Upload Berkas <small>(Berkas Prestasi dan Beasiswa jika ada, Maksimal Size 5 MB)</small></label> <br />
                                     <?= $data->berkas_prestasi ?>
                                     <input type="text" name="berkas" class="form-control w-100" readonly value="Sudah Diterima Staff">
                                 <?php } ?>

@@ -116,7 +116,7 @@ class C_pendaftar extends CI_Controller
             }
         }
 
-        $this->Pendaftar_Model->update_profile($pendaftar, $id_pendaftar);
+        // $this->Pendaftar_Model->update_profile($pendaftar, $id_pendaftar);
 
         $index_prestasi = 0;
         $prestasi_pendaftar = [];

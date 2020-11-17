@@ -31,7 +31,7 @@
                         <input type="password" name="password_confirm" class="form-control password">
                     </div>
                     <div class="form-group">
-                        <label>Foto (Background Merah Ukuran 3x4)</label> <br />
+                        <label>Foto (Background Merah Ukuran 3x4, Maksimal size 2 MB)</label> <br />
                         <div>
                             <img src="<?= base_url('assets/img/profile/') . $user->foto ?>" width="150px" height="200px" class="mb-2">
                             <p id="hasil" hidden>Preview Update Foto</p>

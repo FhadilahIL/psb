@@ -76,13 +76,13 @@
                     <input type="text" class="form-control" value="<?= $user->nisn ?>" readonly>
                 </div>
                 <div class="form-group">
-                    <label>Upload Bukti Pembayaran</label> <br />
+                    <label>Upload Bukti Pembayaran (Maksimal size 2 MB)</label> <br />
                     <div id="hasil" hidden>
                         <img id="preview" class="mb-3 rounded" hidden />
                     </div>
                     <input type="file" class="form-control-file" name="foto" id="gambar" accept=".jpg, .png, .jpeg" onchange="tampilkanPreview(this,'preview')">
                 </div>
-                <?php if ($detail_pembayaran->status_pembayaran == 'Diterima') { ?>
+                <?php if ($detail_pembayaran->status_pembayaran == 'Diterima' || $detail_pembayaran->status_pembayaran == 'Processing') { ?>
                     <button type="submit" disabled class="btn btn-success btn-block">Upload Bukti Pembayaran</button>
                 <?php } else { ?>
                     <button type="submit" class="btn btn-success btn-block">Upload Bukti Pembayaran</button>
