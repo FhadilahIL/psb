@@ -105,6 +105,16 @@ $(document).ready(function () {
 		$(this).parents("#isi_prestasi").remove();
 	});
 
+	$("#tanggal_pembukaan").change(function () {
+		var tanggal_pembukaan = $('#tanggal_pembukaan').val()
+		document.getElementById('tanggal_penutupan').min = tanggal_pembukaan
+	});
+
+	$("#tanggal_penutupan").change(function () {
+		var tanggal_penutupan = $('#tanggal_penutupan').val()
+		document.getElementById('tanggal_pengumuman').min = tanggal_penutupan
+	});
+
 	$("body").on("click", ".hapus_prestasi", function () {
 		var id_prestasi = $(this).parents("#isi_prestasi").data('id')
 		Swal.fire({
@@ -303,25 +313,6 @@ function tambahPrestasi() {
 	html += '<input type="text" name="penyelenggara_prestasi[]" class="form-control w-100">'
 	html += '</div>'
 	html += '</div>'
-	if (id_role == '1') {
-		html += '<div class="form-inline row mb-2">'
-		html += '<div class="col-2 d-flex justify-content-start">'
-		html += '<label>Berkas Prestasi</label>'
-		html += '</div>'
-		html += '<div class="col-10">'
-		html += '<input type="text" value="Sudah Diberikan Staff" name="berkas_prestasi[]" class="form-control w-100">'
-		html += '</div>'
-		html += '</div>'
-	} else if (id_role == '2') {
-		html += '<div class="form-inline row mb-2">'
-		html += '<div class="col-2 d-flex justify-content-start">'
-		html += '<label>Berkas Prestasi</label>'
-		html += '</div>'
-		html += '<div class="col-10">'
-		html += '<input type="file" name="berkas_prestasi[]" accept=".pdf" class="form-control-file w-100">'
-		html += '</div>'
-		html += '</div>'
-	}
 	html += '</div>'
 	$('#field_prestasi').append(html)
 }
@@ -372,25 +363,6 @@ function tambahBeasiswa() {
 	html += '<input type="number" name="tahun_selesai[]" class="form-control w-100" placeholder="contoh : 2019">'
 	html += '</div>'
 	html += '</div>'
-	if (id_role == '1') {
-		html += '<div class="form-inline row mb-2">'
-		html += '<div class="col-2 d-flex justify-content-start">'
-		html += '<label>Berkas Beasiswa</label>'
-		html += '</div>'
-		html += '<div class="col-10">'
-		html += '<input type="text" value="Sudah Diberikan Staff" name="berkas_beasiswa[]" class="form-control w-100">'
-		html += '</div>'
-		html += '</div>'
-	} else if (id_role == '2') {
-		html += '<div class="form-inline row mb-2">'
-		html += '<div class="col-2 d-flex justify-content-start">'
-		html += '<label>Berkas Beasiswa</label>'
-		html += '</div>'
-		html += '<div class="col-10">'
-		html += '<input type="file" name="berkas_beasiswa[]" accept=".pdf" class="form-control-file w-100">'
-		html += '</div>'
-		html += '</div>'
-	}
 	html += '</div>'
 	$('#field_beasiswa').append(html)
 }

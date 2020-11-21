@@ -44,22 +44,12 @@
         <tr>
             <td valign="center">No. Registrasi</td>
             <td valign="center" align="center">:</td>
-            <td valign="center">3674010801990005</td>
+            <td valign="center"><?= $no_reg->no_reg ?></td>
         </tr>
         <tr>
             <td valign="center">Alamat</td>
             <td valign="center" align="center">:</td>
             <td valign="center" style="text-align: justify;"><?= $user->alamat ?> <?= $user->dusun ?>, Kel. <?= $user->kelurahan ?>, Kec. <?= $user->kecamatan ?>, <?= $user->kota ?>, <?= $user->provinsi ?></td>
-        </tr>
-        <tr>
-            <td valign="center">No. Ijazah</td>
-            <td valign="center" align="center">:</td>
-            <td valign="center"><?= $user->no_ijazah ?></td>
-        </tr>
-        <tr>
-            <td valign="center">No. SKHUN</td>
-            <td valign="center" align="center">:</td>
-            <td valign="center"><?= $user->no_skhun ?></td>
         </tr>
         <tr>
             <td valign="center">Tempat Lahir</td>

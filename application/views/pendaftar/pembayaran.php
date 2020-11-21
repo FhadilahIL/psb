@@ -50,7 +50,7 @@
                             </div>
                         </div>
                         <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal"><i class="fas fa-sign-out-alt fa-flip-horizontal"></i> Close</button>
                         </div>
                     </div>
                 </div>

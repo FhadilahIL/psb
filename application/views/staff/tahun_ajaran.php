@@ -116,15 +116,15 @@
                                             </div>
                                             <div class="form-group">
                                                 <label>Tanggal Pembukaan Pendaftaran</label>
-                                                <input type="date" class="form-control" name="tanggal_pembukaan" value="<?= date('Y-m-d', strtotime($data->tanggal_pembukaan_pendaftaran)) ?>">
+                                                <input type="date" class="form-control" name="tanggal_pembukaan" id="tanggal_pembukaan" value="<?= date('Y-m-d', strtotime($data->tanggal_pembukaan_pendaftaran)) ?>">
                                             </div>
                                             <div class="form-group">
                                                 <label>Tanggal Penutupan Pendaftaran</label>
-                                                <input type="date" class="form-control" name="tanggal_penutupan" value="<?= date('Y-m-d', strtotime($data->tanggal_penutup_pendaftaran)) ?>">
+                                                <input type="date" class="form-control" name="tanggal_penutupan" id="tanggal_penutupan" min="" value="<?= date('Y-m-d', strtotime($data->tanggal_penutup_pendaftaran)) ?>">
                                             </div>
                                             <div class="form-group">
                                                 <label>Tanggal Pengumuman Kelulusan</label>
-                                                <input type="date" class="form-control" name="tanggal_pengumuman" value="<?= date('Y-m-d', strtotime($data->tanggal_pengumuman)) ?>">
+                                                <input type="date" class="form-control" name="tanggal_pengumuman" id="tanggal_pengumuman" min="" value="<?= date('Y-m-d', strtotime($data->tanggal_pengumuman)) ?>">
                                             </div>
                                             <div class="form-group">
                                                 <label>Jumlah Pilihan Ganda</label>

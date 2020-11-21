@@ -92,10 +92,9 @@ class Auth extends CI_Controller
          [
             'field'  => 'nisn',
             'label'  => 'NISN',
-            'rules'  => 'required|trim|numeric|max_length[10]|min_length[10]',
+            'rules'  => 'required|trim|numeric|max_length[10]',
             'errors' => [
                'max_length'   => 'NISN Harus 10 Digit Angka',
-               'min_length'   => 'NISN Harus 10 Digit Angka',
                'required'     => 'NISN Harus Diisi.'
             ]
          ],
@@ -169,11 +168,10 @@ class Auth extends CI_Controller
          [
             'field'  => 'nisn',
             'label'  => 'NISN',
-            'rules'  => 'required|trim|numeric|min_length[10]|max_length[10]|is_unique[tb_pendaftar.nisn]',
+            'rules'  => 'required|trim|numeric|max_length[10]|is_unique[tb_pendaftar.nisn]',
             'errors' => [
                'required'     => 'NISN Harus Diisi.',
                'max_length'   => 'NISN Harus 10 Karakter',
-               'min_length'   => 'NISN Harus 10 Karakter',
                'is_unique'    => 'NISN sudah terdaftar',
                'numeric'      => 'NISN Harus Angka'
 
@@ -200,10 +198,25 @@ class Auth extends CI_Controller
 
       if ($this->form_validation->run() == FALSE) {
          // jika gagal
-         $sekolah = $this->Sekolah_Model->tampil_data_sekolah()->row();
-         $data['logo_sekolah'] = $sekolah->logo_sekolah;
-         $data['nama_sekolah'] = strtoupper($sekolah->nama_sekolah);
-         $this->load->view('registrasi/index', $data);
+         $tahun_ajaran = $this->Tahun_Ajaran_Model->cari_tahun_ajaran_terakhir()->row();
+         $buka = date($tahun_ajaran->tanggal_pembukaan_pendaftaran);
+         $tutup = date($tahun_ajaran->tanggal_penutup_pendaftaran);
+         if (time() < strtotime($buka)) {
+            $this->session->set_flashdata('notif', "Gagal");
+            $this->session->set_flashdata('perintah', "Pendaftaran Belum Dibuka");
+            $this->session->set_flashdata('pesan', "Mohon Maaf Pendaftaran Tahun Ajaran " . $tahun_ajaran->tahun_ajaran . " Belum Dibuka Pendaftaran Akan Dibuka Pada Tanggal " . date('d F Y', strtotime($tahun_ajaran->tanggal_pembukaan_pendaftaran)) . ".");
+            redirect('home');
+         } else if (time() > strtotime('+1 Day', strtotime($tutup))) {
+            $this->session->set_flashdata('notif', "Gagal");
+            $this->session->set_flashdata('perintah', "Pendaftaran Sudah Ditutup");
+            $this->session->set_flashdata('pesan', "Mohon Maaf Pendaftaran Tahun Ajaran " . $tahun_ajaran->tahun_ajaran . " Sudah Ditutup Pada Tanggal " . date('d F Y', strtotime($tahun_ajaran->tanggal_penutup_pendaftaran)) . ".");
+            redirect('home');
+         } else {
+            $sekolah = $this->Sekolah_Model->tampil_data_sekolah()->row();
+            $data['logo_sekolah'] = $sekolah->logo_sekolah;
+            $data['nama_sekolah'] = strtoupper($sekolah->nama_sekolah);
+            $this->load->view('registrasi/index', $data);
+         }
       } else {
          // jika berhasil
          $nama = trim($this->input->post('nama', TRUE));

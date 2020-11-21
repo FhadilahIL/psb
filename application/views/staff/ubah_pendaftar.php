@@ -320,11 +320,11 @@
                                         <label>Berkebutuhan Khusus</label>
                                         <select name="berkebutuhan_khusus_pengasuh[]" class="form-control select">
                                             <?php if ($ayah->berkebutuhan_khusus == 'Ya') { ?>
-                                                <option value="Ya" selected>Ya</option>
                                                 <option value="Tidak">Tidak</option>
+                                                <option value="Ya" selected>Ya</option>
                                             <?php } else { ?>
-                                                <option value="Ya">Ya</option>
                                                 <option value="Tidak" selected>Tidak</option>
+                                                <option value="Ya">Ya</option>
                                             <?php } ?>
                                         </select>
                                     </div>
@@ -338,7 +338,7 @@
                                     </div>
                                     <div class="form-group">
                                         <label>Penghasilan</label>
-                                        <input type="text" oninput="this.value = this.value.replace(/[^0-9]/g,'').replace(/(\..*)\./g, '$1')" name="penghasilan[]" class="form-control" value="<?= number_format($ayah->penghasilan, 0, '', '.') ?>">
+                                        <input type="text" oninput="this.value = this.value.replace(/[^0-9]/g,'').replace(/(\..*)\./g, '$1')" name="penghasilan[]" class="form-control" value="<?= $ayah->penghasilan ?>">
                                     </div>
                                     <hr />
                                 </div>
@@ -358,8 +358,8 @@
                                     <div class="form-group">
                                         <label>Berkebutuhan Khusus</label>
                                         <select name="berkebutuhan_khusus_pengasuh[]" class="form-control select">
-                                            <option value="Ya">Ya</option>
                                             <option value="-">Tidak</option>
+                                            <option value="Ya">Ya</option>
                                         </select>
                                     </div>
                                     <div class="form-group">
@@ -395,11 +395,11 @@
                                         <label>Berkebutuhan Khusus</label>
                                         <select name="berkebutuhan_khusus_pengasuh[]" class="form-control select">
                                             <?php if ($ibu->berkebutuhan_khusus == 'Ya') { ?>
-                                                <option value="Ya" selected>Ya</option>
                                                 <option value="Tidak">Tidak</option>
+                                                <option value="Ya" selected>Ya</option>
                                             <?php } else { ?>
-                                                <option value="Ya">Ya</option>
                                                 <option value="Tidak" selected>Tidak</option>
+                                                <option value="Ya">Ya</option>
                                             <?php } ?>
                                         </select>
                                     </div>
@@ -413,7 +413,7 @@
                                     </div>
                                     <div class="form-group">
                                         <label>Penghasilan</label>
-                                        <input type="text" oninput="this.value = this.value.replace(/[^0-9]/g,'').replace(/(\..*)\./g, '$1')" name="penghasilan[]" class="form-control" value="<?= number_format($ibu->penghasilan, 0, '', '.') ?>">
+                                        <input type="text" oninput="this.value = this.value.replace(/[^0-9]/g,'').replace(/(\..*)\./g, '$1')" name="penghasilan[]" class="form-control" value="<?= $ibu->penghasilan ?>">
                                     </div>
                                     <hr />
                                 </div>
@@ -433,8 +433,8 @@
                                     <div class="form-group">
                                         <label>Berkebutuhan Khusus</label>
                                         <select name="berkebutuhan_khusus_pengasuh[]" class="form-control select">
-                                            <option value="Ya">Ya</option>
                                             <option value="-">Tidak</option>
+                                            <option value="Ya">Ya</option>
                                         </select>
                                     </div>
                                     <div class="form-group">
@@ -470,11 +470,11 @@
                                         <label>Berkebutuhan Khusus</label>
                                         <select name="berkebutuhan_khusus_pengasuh[]" class="form-control select">
                                             <?php if ($wali->berkebutuhan_khusus == 'Ya') { ?>
-                                                <option value="Ya" selected>Ya</option>
                                                 <option value="Tidak">Tidak</option>
+                                                <option value="Ya" selected>Ya</option>
                                             <?php } else { ?>
-                                                <option value="Ya">Ya</option>
                                                 <option value="Tidak" selected>Tidak</option>
+                                                <option value="Ya">Ya</option>
                                             <?php } ?>
                                         </select>
                                     </div>
@@ -488,7 +488,7 @@
                                     </div>
                                     <div class="form-group">
                                         <label>Penghasilan</label>
-                                        <input type="text" oninput="this.value = this.value.replace(/[^0-9]/g,'').replace(/(\..*)\./g, '$1')" name="penghasilan[]" class="form-control" value="<?= number_format($wali->penghasilan, 0, '', '.') ?>">
+                                        <input type="text" oninput="this.value = this.value.replace(/[^0-9]/g,'').replace(/(\..*)\./g, '$1')" name="penghasilan[]" class="form-control" value="<?= $wali->penghasilan ?>">
                                     </div>
                                     <hr />
                                 </div>
@@ -508,8 +508,8 @@
                                     <div class="form-group">
                                         <label>Berkebutuhan Khusus</label>
                                         <select name="berkebutuhan_khusus_pengasuh[]" class="form-control select">
-                                            <option value="Ya">Ya</option>
                                             <option value="-">Tidak</option>
+                                            <option value="Ya">Ya</option>
                                         </select>
                                     </div>
                                     <div class="form-group">
