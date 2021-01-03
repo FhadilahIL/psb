@@ -77,11 +77,11 @@
                             <td class="text-center">
                                 <?php if ($nilai->keterangan_kelulusan == '') { ?>
                                     <button type="button" class="btn btn-warning btn-sm" data-toggle="modal" data-target="#staticBackdropEdit<?= $nilai->id_penilaian_pendaftar ?>">
-                                        <i class="fas fa-edit"></i>
+                                        <i class="fas fa-edit fa-fw"></i>
                                     </button>
                                 <?php } else { ?>
                                     <button type="button" class="btn btn-info btn-sm" data-toggle="modal" data-target="#staticBackdropDetail<?= $nilai->id_penilaian_pendaftar ?>">
-                                        <i class="fas fa-info"></i>
+                                        <i class="fas fa-info fa-fw"></i>
                                     </button>
                                 <?php } ?>
                             </td>

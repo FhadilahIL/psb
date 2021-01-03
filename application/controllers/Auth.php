@@ -204,12 +204,12 @@ class Auth extends CI_Controller
          if (time() < strtotime($buka)) {
             $this->session->set_flashdata('notif', "Gagal");
             $this->session->set_flashdata('perintah', "Pendaftaran Belum Dibuka");
-            $this->session->set_flashdata('pesan', "Mohon Maaf Pendaftaran Tahun Ajaran " . $tahun_ajaran->tahun_ajaran . " Belum Dibuka Pendaftaran Akan Dibuka Pada Tanggal " . date('d F Y', strtotime($tahun_ajaran->tanggal_pembukaan_pendaftaran)) . ".");
+            $this->session->set_flashdata('pesan', "Mohon Maaf Pendaftaran Tahun Ajaran " . $tahun_ajaran->tahun_ajaran . " Belum Dibuka. Pendaftaran Akan Dibuka Pada Tanggal " . date('d F Y', strtotime($tahun_ajaran->tanggal_pembukaan_pendaftaran)) . ".");
             redirect('home');
          } else if (time() > strtotime('+1 Day', strtotime($tutup))) {
             $this->session->set_flashdata('notif', "Gagal");
             $this->session->set_flashdata('perintah', "Pendaftaran Sudah Ditutup");
-            $this->session->set_flashdata('pesan', "Mohon Maaf Pendaftaran Tahun Ajaran " . $tahun_ajaran->tahun_ajaran . " Sudah Ditutup Pada Tanggal " . date('d F Y', strtotime($tahun_ajaran->tanggal_penutup_pendaftaran)) . ".");
+            $this->session->set_flashdata('pesan', "Mohon Maaf Pendaftaran Tahun Ajaran " . $tahun_ajaran->tahun_ajaran . " Sudah Ditutup Pada Tanggal " . date('d F Y', strtotime($tahun_ajaran->tanggal_penutup_pendaftaran)) . ". Silahkan Tunggu Informasi Lebih Lanjut.");
             redirect('home');
          } else {
             $sekolah = $this->Sekolah_Model->tampil_data_sekolah()->row();

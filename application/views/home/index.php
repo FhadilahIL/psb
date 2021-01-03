@@ -56,8 +56,8 @@
                         <li class="nav-item active dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Login</a>
                             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item" href="<?= base_url('auth/staff') ?>">Staff</a>
-                                <a class="dropdown-item" href="<?= base_url('auth/pendaftar') ?>">Pendaftar</a>
+                                <a class="dropdown-item" href="<?= base_url('admin') ?>">Staff</a>
+                                <a class="dropdown-item" href="<?= base_url('siswa') ?>">Pendaftar</a>
                             </div>
                         </li>
                     </ul>
@@ -73,13 +73,30 @@
             </div>
             <h1 class="text-center mt-3"><b><?= $nama_sekolah ?></b></h1>
             <p class="text-center"><?= $alamat_sekolah ?></p>
-            <p class="text-justify"><?= $deskripsi_sekolah ?></p>
+            <!-- <p class="text-center"><?= $deskripsi_sekolah ?></p> -->
             <div class="row">
                 <div class="col-3">
-                    <img src="<?= base_url('/assets/img/sekolah/') . $foto_kepala_sekolah ?>" alt="Foto Kepala Sekolah" class="shadow w-100">
+                    <img src="<?= base_url('/assets/img/sekolah/') . $foto_kepala_sekolah ?>" alt="Foto Kepala Sekolah" class="shadow-lg w-100">
                 </div>
                 <div class="col-9">
-                    <p class="text-justify"><?= $sambutan_kepala_sekolah ?></p>
+                    <b>Visi</b>
+                    <p class="text-justify">
+                        Unggul dalam bidang akademik dan non-akademik, beriman, berbudaya, dan berbudi pekerti luhur dalam perilaku.
+                    </p>
+                    <b>Misi</b>
+                    <ol class="text-justify ml-n3">
+                        <li>Mewujudkan prestasi sekolah dibidang akademik dan non-akademik.</li>
+                        <li>Mewujudkan pembelajaran paikem, inovatif, dan konstektual.</li>
+                        <li>Mewujudkan sumber daya pendidik dan kependidikan yang profesional.</li>
+                        <li>Mewujudkan kemampuan guru, pegawai, dan siswa dalam penggunaan bahasa asing (Bahasa Inggris dan Arab).</li>
+                        <li>Mewujudkan sarana dan prasarana yang lengkap dan memadai.</li>
+                        <li>Mewujudkan standar biaya yang memadai dan terpenuhi.</li>
+                        <li>Mewujudkan sistem penilaian yang berkualitas dan akurat.</li>
+                        <li>Membiasakan warga sekolah untuk melaksanakan 5S (Senyum, Salam, Sapa, Sopan, dan Santun).</li>
+                        <li>Menciptakan suasana sekolah yang harmonis berdasarkan kedisplinan, partisipasi, tanggung jawab, kebersamaan, kejujuran, kekeluargaan, dan semangat.</li>
+                        <li>Menanamkan sikap saling menghormati antar warga sekolah.</li>
+                        <li>Membiasakan warga sekolah untuk menjaga kebersihan lingkungan untuk mendukung program clean and green.</li>
+                    </ol>
                 </div>
             </div>
         </div>

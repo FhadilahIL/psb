@@ -70,6 +70,7 @@
     <div style="width: 97%;">
         <div class="text-right" style="margin-top: 130px;">
             <p>Gunung Sindur, <?= date('d F Y') ?></p>
+            <p class="mr-5 mt-n3">Kepala Sekolah</p>
         </div>
         <div class="text-right" style="margin-top: 80px;">
             <p class="mr-5">( <?= $kepala_sekolah ?> )</p>

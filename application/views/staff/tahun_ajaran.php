@@ -93,7 +93,7 @@
                             <td class="text-center"><?= date('d M Y', strtotime($data->tanggal_pengumuman)) ?></td>
                             <td class="text-center">
                                 <button type="button" class="btn btn-warning btn-sm" data-toggle="modal" data-target="#staticBackdropEdit<?= $data->id_tahun_ajaran ?>">
-                                    <i class="fas fa-edit"></i>
+                                    <i class="fas fa-edit fa-fw"></i>
                                 </button>
                             </td>
                         </tr>
