@@ -32,6 +32,7 @@ class C_user extends CI_Controller
 			'tanggal_lahir'	=> '',
 			'password'		=> password_hash($password, PASSWORD_DEFAULT),
 			'foto'			=> 'default.png',
+			'status'		=> '1',
 		];
 		if ($this->Staff_Model->simpan_staff($data)) {
 			$this->session->set_flashdata('notif', 'Berhasil');

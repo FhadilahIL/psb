@@ -54,30 +54,35 @@ class Auth extends CI_Controller
 
 
          $staff = $this->Staff_Model->cari_email_staff($email);
-         // print_r($staff->row());
-         // die;
 
          if ($staff->num_rows() > 0) {
             $staff_data = $staff->row();
             if (password_verify($password, $staff_data->password)) {
-               $data_user = [
-                  'id_user'   => $staff_data->id_staff,
-                  'email'     => $staff_data->email_staff,
-                  'id_role'   => '1',
-               ];
-               $this->session->set_userdata($data_user);
-               redirect('auth/cek_session');
+               if ($staff_data->status == 1) {
+                  $data_user = [
+                     'id_user'   => $staff_data->id_staff,
+                     'email'     => $staff_data->email_staff,
+                     'id_role'   => '1',
+                  ];
+                  $this->session->set_userdata($data_user);
+                  redirect('auth/cek_session');
+               } else {
+                  $this->session->set_flashdata('notif', "Gagal");
+                  $this->session->set_flashdata('perintah', "Gagal Login");
+                  $this->session->set_flashdata('pesan', "Status Staff Anda Tidak Aktif. Silahkan Cek Kembali!");
+                  redirect('admin');
+               }
             } else {
                $this->session->set_flashdata('notif', "Gagal");
                $this->session->set_flashdata('perintah', "Gagal Login");
                $this->session->set_flashdata('pesan', "Password Yang Anda Masukan Salah. Silahkan Cek Kembali!");
-               redirect('auth/staff');
+               redirect('admin');
             }
          } else {
             $this->session->set_flashdata('notif', "Gagal");
             $this->session->set_flashdata('perintah', "Gagal Login");
             $this->session->set_flashdata('pesan', "Email Tidak Terdaftar. Silahkan Cek Kembali!");
-            redirect('auth/staff');
+            redirect('admin');
          }
       }
    }
@@ -137,13 +142,13 @@ class Auth extends CI_Controller
                $this->session->set_flashdata('notif', "Gagal");
                $this->session->set_flashdata('perintah', "Ubah Password");
                $this->session->set_flashdata('pesan', "Password yang anda masukan salah!");
-               redirect('auth/pendaftar');
+               redirect('siswa');
             }
          } else {
             $this->session->set_flashdata('notif', "Gagal");
             $this->session->set_flashdata('perintah', "Ubah Password");
             $this->session->set_flashdata('pesan', "NISN Tidak Terdaftar! Silahkan Mendaftar");
-            redirect('auth/pendaftar');
+            redirect('siswa');
          }
       }
    }
@@ -240,12 +245,12 @@ class Auth extends CI_Controller
             $this->session->set_flashdata('notif', "Berhasil");
             $this->session->set_flashdata('perintah', "Registrasi Berhasil");
             $this->session->set_flashdata('pesan', "Berhasil Registrasi! Silahkan Login.");
-            redirect('auth/pendaftar');
+            redirect('siswa');
          } else {
             $this->session->set_flashdata('notif', "Gagal");
             $this->session->set_flashdata('perintah', "Gagal Registrasi");
             $this->session->set_flashdata('pesan', "Registrasi Gagal! Silahkan Cek Data Kembali.");
-            redirect('auth/registrasi');
+            redirect('registrasi');
          }
       }
    }
@@ -294,7 +299,7 @@ class Auth extends CI_Controller
                $this->session->set_flashdata('notif', "Berhasil");
                $this->session->set_flashdata('perintah', "Ubah Password");
                $this->session->set_flashdata('pesan', "Password Anda Sekarang Adalah '" . $password_default . "' Silahkan Login dengan Password Baru");
-               redirect('auth/staff');
+               redirect('staff');
             }
          } else {
             $this->session->set_flashdata('notif', "Gagal");
@@ -324,7 +329,7 @@ class Auth extends CI_Controller
                $this->session->set_flashdata('notif', "Berhasil");
                $this->session->set_flashdata('perintah', "Ubah Password");
                $this->session->set_flashdata('pesan', "Password Anda Sekarang Adalah '" . $password_default . "' Silahkan Login dengan Password Baru");
-               redirect('auth/pendaftar');
+               redirect('siswa');
             }
          } else {
             $this->session->set_flashdata('notif', "Gagal");
