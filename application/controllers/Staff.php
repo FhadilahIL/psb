@@ -259,4 +259,19 @@ class Staff extends CI_Controller
         $this->load->view('staff/cetak_laporan');
         $this->load->view('templates/footer');
     }
+
+    function data_staff()
+    {
+        $data['judul'] = "Data Admin";
+        $data['selected'] = ['', '', '', '', '', '', ''];
+        $data['active'] = ['', '', '', '', '', '', ''];
+        $data['user'] = $this->Staff_Model->cari_email_staff($this->session->userdata('email'))->row();
+        $data['data_staff'] = $this->Staff_Model->cari_staff_semua()->result();
+
+        $this->load->view('templates/header', $data);
+        $this->load->view('templates/topbar');
+        $this->load->view('templates/sidebar_staff');
+        $this->load->view('staff/data_staff');
+        $this->load->view('templates/footer');
+    }
 }

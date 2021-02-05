@@ -12,6 +12,38 @@ class C_user extends CI_Controller
 		$this->load->model('Pembayaran_Model');
 	}
 
+	function cari_staff()
+	{
+		$email = $this->input->post('email', TRUE);
+		$data = $this->Staff_Model->cari_email_staff($email)->row();
+		echo json_encode($data);
+	}
+
+	function tambah_staff()
+	{
+		$nama = $this->input->post('nama_staff', TRUE);
+		$email = $this->input->post('email_staff', TRUE);
+		$potong_email = explode('@', $email);
+		$password = 'staff#' . $potong_email[0];
+
+		$data = [
+			'nama_staff'	=> $nama,
+			'email_staff'	=> $email,
+			'tanggal_lahir'	=> '',
+			'password'		=> password_hash($password, PASSWORD_DEFAULT),
+			'foto'			=> 'default.png',
+		];
+		if ($this->Staff_Model->simpan_staff($data)) {
+			$this->session->set_flashdata('notif', 'Berhasil');
+			$this->session->set_flashdata('perintah', 'Tambah Data Staff');
+			$this->session->set_flashdata('pesan', 'Data Staff Berhasil Ditambahkan');
+		} else {
+			$this->session->set_flashdata('notif', 'gagal');
+			$this->session->set_flashdata('perintah', 'Tambah Data Staff');
+			$this->session->set_flashdata('pesan', 'Data Staff Gagal Ditambahkan');
+		}
+	}
+
 	function update_my()
 	{
 		$password_plain = $this->input->post('password', TRUE);

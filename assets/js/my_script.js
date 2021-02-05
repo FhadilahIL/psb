@@ -18,7 +18,6 @@ $(document).ready(function () {
 
 	$('#pilih_cetak').change(function () {
 		var id_tahun_ajaran = document.getElementById('pilih_cetak').value
-		console.log(id_tahun_ajaran)
 		$.ajax({
 			type: 'get',
 			url: '/psb/c_pendaftar/tampil_siswa_laporan/' + id_tahun_ajaran,
@@ -235,6 +234,33 @@ $(document).ready(function () {
 			success: function (data) {
 				var table = $('.tabel_pendaftar').DataTable();
 				table.search('Tahun Ajaran ' + data.tahun_ajaran).draw();
+			}
+		})
+	})
+
+	$('#cek').click(function () {
+		var email_staff = $('#email_staff').val()
+		var tombol = document.getElementById('simpan_data')
+		$('#notify').removeClass()
+		$.ajax({
+			url: '/psb/c_user/cari_staff',
+			type: 'post',
+			data: {
+				email: email_staff
+			},
+			dataType: 'json',
+			success: function (data) {
+				if (data) {
+					var peringatan = 'Email Sudah Digunakan'
+					$("#notify").addClass("text-danger")
+					$('#notify').html(peringatan);
+					tombol.disabled = true
+				} else {
+					var peringatan = 'Email Bisa Digunakan'
+					$("#notify").addClass("text-success")
+					$('#notify').html(peringatan)
+					tombol.disabled = false
+				}
 			}
 		})
 	})

@@ -16,7 +16,7 @@
                             <h2 class="text-center">Identitas Peserta Didik</h2>
                             <div class="form-group">
                                 <label>Nama Lengkap</label>
-                                <input type="hidden" name="id_pendaftar" value="<?= $data_pendaftar->id_pendaftar ?>" class="form-control" readonly>
+                                <input type="hidden" name="id_pendaftar" value="<?= $data_pendaftar->id_pendaftar ?>" class="form-control required" readonly>
                                 <input type="text" name="nama_pendaftar" value="<?= $data_pendaftar->nama_pendaftar ?>" class="form-control" readonly>
                             </div>
                             <div class="form-group">
@@ -25,7 +25,7 @@
                             </div>
                             <div class="form-group">
                                 <label>NISN</label>
-                                <input type="text" name="nisn" value="<?= $data_pendaftar->nisn ?>" class="form-control" readonly>
+                                <input type="text" name="nisn" value="<?= $data_pendaftar->nisn ?>" class="form-control required" readonly>
                             </div>
                             <div class="form-group">
                                 <label>Jenis Kelamin</label>
@@ -64,11 +64,11 @@
                             </div>
                             <div class="form-group">
                                 <label>Tempat Lahir</label>
-                                <input type="text" name="tempat_lahir" maxlength="30" value="<?= $data_pendaftar->tempat_lahir ?>" class="form-control">
+                                <input type="text" name="tempat_lahir" maxlength="30" value="<?= $data_pendaftar->tempat_lahir ?>" class="form-control required">
                             </div>
                             <div class="form-group">
                                 <label>Tanggal Lahir</label>
-                                <input type="date" name="tanggal_lahir_pendaftar" value="<?= date('Y-m-d', strtotime($data_pendaftar->tanggal_lahir)) ?>" class="form-control">
+                                <input type="date" name="tanggal_lahir_pendaftar" value="<?= date('Y-m-d', strtotime($data_pendaftar->tanggal_lahir)) ?>" class="form-control required">
                             </div>
                             <div class="form-group">
                                 <label>Agama</label>
@@ -94,27 +94,27 @@
                             </div>
                             <div class="form-group">
                                 <label>Alamat</label>
-                                <input type="text" name="alamat" value="<?= $data_pendaftar->alamat ?>" class="form-control">
+                                <input type="text" name="alamat" value="<?= $data_pendaftar->alamat ?>" class="form-control required">
                             </div>
                             <div class="form-group">
                                 <label>Dusun</label>
-                                <input type="text" name="dusun" value="<?= $data_pendaftar->dusun ?>" class="form-control">
+                                <input type="text" name="dusun" value="<?= $data_pendaftar->dusun ?>" class="form-control required">
                             </div>
                             <div class="form-group">
                                 <label>Kelurahan</label>
-                                <input type="text" name="kelurahan" maxlength="30" value="<?= $data_pendaftar->kelurahan ?>" class="form-control">
+                                <input type="text" name="kelurahan" maxlength="30" value="<?= $data_pendaftar->kelurahan ?>" class="form-control required">
                             </div>
                             <div class="form-group">
                                 <label>Kecamatan</label>
-                                <input type="text" name="kecamatan" maxlength="30" value="<?= $data_pendaftar->kecamatan ?>" class="form-control">
+                                <input type="text" name="kecamatan" maxlength="30" value="<?= $data_pendaftar->kecamatan ?>" class="form-control required">
                             </div>
                             <div class="form-group">
                                 <label>Kabupaten / Kota</label>
-                                <input type="text" name="kota" maxlength="30" value="<?= $data_pendaftar->kota ?>" class="form-control">
+                                <input type="text" name="kota" maxlength="30" value="<?= $data_pendaftar->kota ?>" class="form-control required">
                             </div>
                             <div class="form-group">
                                 <label>Provinsi</label>
-                                <input type="text" name="provinsi" maxlength="30" value="<?= $data_pendaftar->provinsi ?>" class="form-control">
+                                <input type="text" name="provinsi" maxlength="30" value="<?= $data_pendaftar->provinsi ?>" class="form-control required">
                             </div>
                             <div class="form-group">
                                 <label>Transportasi</label>
